@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgStore_main"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@color/purple_200" />
+
+            <Button
+                android:id="@+id/btn_edit_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edit img"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgStore_main"
+                app:layout_constraintStart_toStartOf="@+id/imgStore_main"
+                app:layout_constraintTop_toBottomOf="@+id/imgStore_main" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/storeName_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Name" />
+
+            <EditText
+                android:id="@+id/et_name_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/storeDescribe_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Describe" />
+
+            <EditText
+                android:id="@+id/et_describe_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btn_submitStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Done" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="418dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/layout_store"
+        tools:layout_editor_absoluteX="-30dp">
+
+        <TextView
+            android:id="@+id/title_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MENU"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="之後要補listview" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
