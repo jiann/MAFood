@@ -4,13 +4,13 @@
 | jiann        | d0809296 | 辜建為 |
 | fcu-d0809296 | d0862965 | 李彥德 |
 
-<div class="foo">
+
 
 Header | header
 ------ | -----
 Bar | bar
 
-</div>
+
 
 
 #工作記錄
