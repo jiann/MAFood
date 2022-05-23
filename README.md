@@ -6,9 +6,9 @@
 
 
 
-Header | header
+工作記錄 | 成員
 ------ | -----
-Bar | bar
+ AndroidStudio 界面實作 | 辜建為
 
 
 
