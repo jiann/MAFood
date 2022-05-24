@@ -9,8 +9,8 @@
 |工作記錄 | 成員| 時間 | 備注 |
 |------ | ----- | ----- | ----- |
 | 界面設計 | 辜建為, 李彥德 | 05/13 | figma |
-| AndroidStudio 界面實作 | 辜建為 | 05/13 | Home, Login, Register |
-| firebase串聯 | 李彥德 | 05/13 | 賬戶登入注冊 |
-| AndroidStudio 界面實作 | 辜建為 | 05/20 | Store |
+| #26,#27 AndroidStudio 界面實作 | 辜建為 | 05/13 | Home, Login, Register |
+|#24,#25 firebase串聯 | 李彥德 | 05/13 | 賬戶登入注冊 |
+| #37 AndroidStudio 界面實作 | 辜建為 | 05/20 | Store |
 
 
