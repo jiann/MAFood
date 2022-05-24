@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(this, StoreActivity.class);
         startActivity(it);
     }
+    public void gotoHomeActivity(View v){
+        Intent it = new Intent(this, HomeActivity.class);
+        startActivity(it);
+    }
     public void goBack(View v) {
         finish();
     }
