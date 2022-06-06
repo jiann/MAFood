@@ -79,6 +79,7 @@ public class RegisterActivity extends AppCompatActivity
         Map<String, Object> user = new HashMap<>();
         user.put("email", email);
         user.put("phone", phone);
+        user.put("identity",identity);
         phoneRef.updateChildren(user);
     }
 }
