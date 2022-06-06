@@ -13,7 +13,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
-    public void gotoProfileActivity(View v) {
+    public void gotoProfileActivity(View v){
         Intent it = new Intent(this, ProfileActivity.class);
         startActivity(it);
     }

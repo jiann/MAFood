@@ -3,6 +3,7 @@ package com.ma.mafood;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,8 @@ public class RegisterActivity extends AppCompatActivity
     private EditText etEmail;
     private EditText etPassword;
     private EditText etPhone;
+    Spinner spinnerRegister;
+    String identity = "none";
 
     private FirebaseAuth firebaseAuth;
 
@@ -34,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         etPhone = findViewById(R.id.et_phone);
+        spinnerRegister = findViewById(R.id.spinner_register);
 
         firebaseAuth = FirebaseAuth.getInstance();
     }
@@ -63,6 +67,10 @@ public class RegisterActivity extends AppCompatActivity
     }
 
     private void addUser() {
+        String[] identity_temp = getResources().getStringArray(R.array.identify);
+        int index = spinnerRegister.getSelectedItemPosition();
+        identity = identity_temp[index];
+
         String email = etEmail.getText().toString();
         String phone = etPhone.getText().toString();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();

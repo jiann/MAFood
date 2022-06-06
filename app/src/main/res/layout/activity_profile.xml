@@ -7,79 +7,79 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:id="@+id/Constraint_footer"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="#DE6868"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
-
-    <ImageButton
-        android:id="@+id/btn_setting"
-        android:layout_width="@android:dimen/app_icon_size"
-        android:layout_height="@android:dimen/app_icon_size"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/settings" />
-
-    <ImageButton
-        android:id="@+id/btn_shoppingCart"
-        android:layout_width="@android:dimen/app_icon_size"
-        android:layout_height="@android:dimen/app_icon_size"
-        android:backgroundTint="#00FFFFFF"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constraint_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DE6868"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/settings" />
+
+        <ImageButton
+            android:id="@+id/btn_shoppingCart"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shopping_cart" />
+
+        <ImageButton
+            android:id="@+id/btn_user"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="141dp"
+        android:layout_height="138dp"
+        app:layout_constraintBottom_toTopOf="@+id/Constraint_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shopping_cart" />
-
-    <ImageButton
-        android:id="@+id/btn_user"
-        android:layout_width="@android:dimen/app_icon_size"
-        android:layout_height="@android:dimen/app_icon_size"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#00FFFFFF"
-        android:onClick="gotoProfileActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055"
         app:srcCompat="@drawable/user" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/uploadPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:backgroundTint="#DE6868"
+        android:text="上傳照片"
+        app:layout_constraintBottom_toBottomOf="@+id/profilePic"
+        app:layout_constraintStart_toStartOf="@+id/profilePic" />
 
-  <ImageView
-      android:id="@+id/imageView"
-      android:layout_width="141dp"
-      android:layout_height="138dp"
-      app:layout_constraintBottom_toTopOf="@+id/Constraint_footer"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.111"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.056"
-      app:srcCompat="@drawable/user" />
-
-  <Button
-      android:id="@+id/uploadPic"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="180dp"
-      android:backgroundTint="#DE6868"
-      android:text="上傳照片"
-      app:layout_constraintBottom_toBottomOf="@+id/imageView"
-      app:layout_constraintStart_toStartOf="@+id/imageView" />
-
-  <ListView
-      android:layout_width="409dp"
-      android:layout_height="513dp"
-      android:layout_marginTop="32dp"
-      android:entries="@array/profileItem"
-      app:layout_constraintTop_toBottomOf="@+id/imageView"
-      tools:layout_editor_absoluteX="1dp" />
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="513dp"
+        android:layout_marginTop="32dp"
+        android:entries="@array/profileItem"
+        app:layout_constraintTop_toBottomOf="@+id/profilePic"
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

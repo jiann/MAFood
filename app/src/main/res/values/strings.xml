@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">MAFood</string>
-    <string-array name="roles">
-        <item>點餐者</item>
-        <item>外送員</item>
-        <item>商家</item>
+    <string-array name="identify">
+        <item>Buyer</item>
+        <item>Seller</item>
+        <item>Courier</item>
     </string-array>
     <string-array name="profileItem">
         <item>錢包</item>

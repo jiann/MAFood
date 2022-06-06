@@ -13,14 +13,15 @@
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="54dp" />
+        tools:layout_editor_absoluteY="54dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/test_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:onClick="gotoMainActivity"
+        android:onClick="gotoHomeActivity"
         android:text="main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -56,10 +57,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="gotoStoreActivity"
         android:text="store"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_register" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:onClick="gotoProfileActivity"
+        android:text="profile"
+        app:layout_constraintStart_toStartOf="@+id/test_store"
+        app:layout_constraintTop_toBottomOf="@+id/test_store" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(intent);
         //}
     }
-    public void gotoMainActivity(View v) {
-        Intent it = new Intent(this, MainActivity.class);
-        startActivity(it);
-    }
+
     public void gotoLoginActivity(View v) {
         Intent it = new Intent(this, LoginActivity.class);
         startActivity(it);
@@ -39,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(this, HomeActivity.class);
         startActivity(it);
     }
+    public void gotoProfileActivity(View v){
+        Intent it = new Intent(this, ProfileActivity.class);
+        startActivity(it);
+    }
+
     public void goBack(View v) {
         finish();
     }
