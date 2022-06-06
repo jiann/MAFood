@@ -12,5 +12,6 @@
 | #26,#27 |AndroidStudio 界面實作 | 辜建為 | 05/10 | Home, Login, Register |
 |#24,#25 |firebase串聯 | 李彥德 | 05/10 | 賬戶登入注冊 |
 | #37 |AndroidStudio 界面實作 | 辜建為 | 05/17 | Store |
+| #14 |Profile 界面實作 | 李彥德 | 05/24 | 個人頁面 |
 
 
