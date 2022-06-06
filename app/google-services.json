@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "8936888159",
-    "firebase_url": "https://mafood-ddf0d-default-rtdb.firebaseio.com",
-    "project_id": "mafood-ddf0d",
-    "storage_bucket": "mafood-ddf0d.appspot.com"
+    "project_number": "851047580995",
+    "firebase_url": "https://mafood-43bfe-default-rtdb.firebaseio.com",
+    "project_id": "mafood-43bfe",
+    "storage_bucket": "mafood-43bfe.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:8936888159:android:2979c70fecdd7d0fe2c8ea",
+        "mobilesdk_app_id": "1:851047580995:android:29a5f60a854a40f3251bf6",
         "android_client_info": {
           "package_name": "com.ma.mafood"
         }
       },
       "oauth_client": [
         {
-          "client_id": "8936888159-vs47rdqej5jsgh6klpkuu1khldctm7qq.apps.googleusercontent.com",
+          "client_id": "851047580995-hjau5j3v96q44e198h4fuh5lavocv5pn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDzUZECjhCVd33MapFCVllka3JTTwfjMiE"
+          "current_key": "AIzaSyBmwnjfZC-DM989lIAagEIf2iDPc0uEK2w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "8936888159-vs47rdqej5jsgh6klpkuu1khldctm7qq.apps.googleusercontent.com",
+              "client_id": "851047580995-hjau5j3v96q44e198h4fuh5lavocv5pn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
