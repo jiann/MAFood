@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.view.View;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -188,9 +187,9 @@ public class StoreActivity extends AppCompatActivity {
 
         uploadTask.addOnFailureListener((e) -> {
             String message = e.toString(); // AddMeal is only a activity, change it names later
-            Toast.makeText(StoreActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();  //being cut on end
+            Toast.makeText(StoreActivity.this, "Errorrs: " + message, Toast.LENGTH_LONG).show();  //being cut on end
             loadingBar.dismiss();
-        }).addOnSuccessListener((OnSuccessListener) (taskSnapshot) -> {
+        }).addOnSuccessListener((OnSuccessListener<? super UploadTask.TaskSnapshot>) (taskSnapshot) -> {
             Toast.makeText(StoreActivity.this, "Meal Image Uploaded Successfully", Toast.LENGTH_SHORT).show();  // being cut on the end
 
             Task<Uri> urlTask = uploadTask.continueWithTask((task) -> {
@@ -248,7 +247,7 @@ public class StoreActivity extends AppCompatActivity {
                     {
                         loadingBar.dismiss();
                         String message = task.getException().toString();
-                        Toast.makeText(StoreActivity.this, "Error: " + message, Toast.LENGTH_LONG).show();
+                        Toast.makeText(StoreActivity.this, "Errorrrr: " + message, Toast.LENGTH_LONG).show();
                     }
                 });
     }

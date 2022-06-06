@@ -13,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testing_area);
 
-        //if (!VALID_USER) {
-//            Intent intent = new Intent();
-//            intent.setClass(this, TestingAreaActivity.class);
-//            startActivity(intent);
-        //}
+        if (!VALID_USER) {
+            Intent intent = new Intent();
+           intent.setClass(this, RegisterActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void gotoLoginActivity(View v) {
