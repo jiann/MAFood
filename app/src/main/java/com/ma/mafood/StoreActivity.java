@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,6 +32,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 public class StoreActivity extends AppCompatActivity {
+    static final String db_name="MAFoodDB";
+    static final String tb_name="Store";
+    SQLiteDatabase db;
 
     private String categoryName, description, price, pname, saveCurrentDate, saveCurrentTime, userID;
     private Button addNewProductButton;
