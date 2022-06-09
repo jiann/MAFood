@@ -220,21 +220,21 @@ public class StoreActivity extends AppCompatActivity {
     private void SaveProductInfoToDatabase()
     {
         HashMap<String, Object> productMap = new HashMap<>();
-        productMap.put("meal id", productKey);
-        productMap.put("upload date", saveCurrentDate);
-        productMap.put("upload time", saveCurrentTime);
-        productMap.put("meal description", description);
+        productMap.put("meal_id", productKey);
+        productMap.put("upload_date", saveCurrentDate);
+        productMap.put("upload_time", saveCurrentTime);
+        productMap.put("meal_description", description);
         productMap.put("image", downloadImageUrl);
         //productMap.put("category", categoryName);
-        productMap.put("meal price", price);
-        productMap.put("meal name", pname);
+        productMap.put("meal_price", price);
+        productMap.put("meal_name", pname);
 
 
         //productMap.put("sellerName", sName);
-        productMap.put("seller address", sAddress);
-        productMap.put("seller phone", sPhone);
-        productMap.put("seller email", sEmail);
-        productMap.put("seller id", userID);
+        productMap.put("seller_address", sAddress);
+        productMap.put("seller_phone", sPhone);
+        productMap.put("seller_email", sEmail);
+        productMap.put("seller_id", userID);
         productMap.put("identify", "seller");
 
 
