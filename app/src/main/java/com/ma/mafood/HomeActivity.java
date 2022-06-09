@@ -48,9 +48,9 @@ public class HomeActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot mySnapshot : snapshot.getChildren()) {
                     String img = snapshot.child("image").toString();
-                    String name = snapshot.child("meal name").toString();
-                    String description = snapshot.child("meal description").toString();
-                    String price = snapshot.child("meal price").toString();
+                    String name = snapshot.child("meal_name").toString();
+                    String description = snapshot.child("meal_description").toString();
+                    String price = snapshot.child("meal_price").toString();
                     Store tempStore = new Store(img, name, description, price);
                     stores.add(tempStore);
                 }
