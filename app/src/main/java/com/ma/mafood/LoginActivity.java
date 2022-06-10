@@ -94,7 +94,7 @@ public class LoginActivity extends AppCompatActivity
                 startActivity(new Intent(this, HomeActivity.class));
                 break;
             case 3:
-                startActivity(new Intent(this, DriverActivity.class));
+                startActivity(new Intent(this, DriverWaitingActivity.class));
                 break;
         }
     }
