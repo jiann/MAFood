@@ -11,8 +11,8 @@
         android:id="@+id/text_add_meal"
         android:layout_width="218dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        android:text="Add Meals"
+        android:layout_marginTop="72dp"
+        android:text="增加餐點"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -25,8 +25,9 @@
         android:id="@+id/input_image"
         android:layout_width="335dp"
         android:layout_height="198dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_add_meal"
         app:srcCompat="@drawable/camera" />
@@ -75,10 +76,64 @@
         android:layout_width="330dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="#DE6868"
+        app:cornerRadius="20dp"
         android:text="Add Meal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_meal_price" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constraint_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DE6868"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:textSize="34sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constraint_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DE6868"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/settings" />
+
+        <ImageButton
+            android:id="@+id/btn_user"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

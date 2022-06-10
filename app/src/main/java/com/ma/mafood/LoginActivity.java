@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity
         switch (i)
         {
             case 1:
-                startActivity(new Intent(this, StoreActivity.class));
+                startActivity(new Intent(this, SellerMainActivity.class));
                 break;
             case 2:
                 startActivity(new Intent(this, HomeActivity.class));
