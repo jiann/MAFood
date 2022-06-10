@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity
     private EditText etPhone;
     Spinner spinnerRegister;
     String identity = "none";
+    private String userID;
+    private FirebaseUser user;
 
     private FirebaseAuth firebaseAuth;
 
@@ -75,7 +78,9 @@ public class RegisterActivity extends AppCompatActivity
         String phone = etPhone.getText().toString();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference usersRef = firebaseDatabase.getReference("users");
-        DatabaseReference phoneRef = usersRef.child(phone);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        userID = user.getUid();
+        DatabaseReference phoneRef = usersRef.child(userID);
         Map<String, Object> user = new HashMap<>();
         user.put("email", email);
         user.put("phone", phone);

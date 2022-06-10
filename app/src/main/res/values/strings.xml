@@ -3,12 +3,16 @@
     <string-array name="identify">
         <item>Buyer</item>
         <item>Seller</item>
-        <item>Courier</item>
+        <item>Driver</item>
     </string-array>
     <string-array name="profileItem">
         <item>錢包</item>
         <item>最愛餐廳</item>
         <item>優惠</item>
         <item>地址</item>
+    </string-array>
+    <string-array name="driverItem">
+        <item>查看評價</item>
+        <item>送單記錄</item>
     </string-array>
 </resources>

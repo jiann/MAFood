@@ -13,6 +13,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity
         implements OnCompleteListener<AuthResult> {
@@ -20,6 +24,9 @@ public class LoginActivity extends AppCompatActivity
     private EditText etEmail;
     private EditText etPassword;
     FirebaseAuth firebaseAuth;
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +56,46 @@ public class LoginActivity extends AppCompatActivity
         if (task.isSuccessful()) {
             Toast.makeText(this, "Login Success", Toast.LENGTH_LONG).show();
             MainActivity.VALID_USER = true;
-            Intent intent = new Intent();
-            intent.setClass(this, HomeActivity.class);
-            startActivity(intent);
+            user = firebaseAuth.getCurrentUser();
+            reference = FirebaseDatabase.getInstance().getReference("users");
+            userID = user.getUid();
+
+            reference.child(userID).child("identity").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>()
+            {
+                @Override
+                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                    if (!task.isSuccessful()) {
+                        Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(LoginActivity.this, String.valueOf(task.getResult().getValue()), Toast.LENGTH_LONG).show();
+                        if (String.valueOf(task.getResult().getValue()).matches("Buyer")){
+                            jumpActivity(2);
+                        }else if (String.valueOf(task.getResult().getValue()).matches("Seller")){
+                            jumpActivity(1);
+                        }else if (String.valueOf(task.getResult().getValue()).matches("Driver")){
+                            jumpActivity(3);
+                        }
+                    }
+                }
+            });
+
         } else {
             Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show();
+        }
+    }
+    private void jumpActivity(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                startActivity(new Intent(this, StoreActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, HomeActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(this, DriverActivity.class));
+                break;
         }
     }
 }
